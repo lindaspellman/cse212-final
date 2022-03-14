@@ -3,7 +3,7 @@
 
 Welcome to the Python Data Structures Tutorial.  Every beginning Python programmer should understand these data structures:
 
-- [Queues](1-queue.md)
+- [Queues](1-queues.md)
 - [Sets](2-set.md)
 - [Trees](3-tree.md)
 
