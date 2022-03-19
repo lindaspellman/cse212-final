@@ -38,6 +38,7 @@ You can learn whether a queue is empty, using a boolean if statement, which will
 
 ``` python
 if len(my_queue) == 0:
+  print("Empty queue!)
 ```
 
 # Example
