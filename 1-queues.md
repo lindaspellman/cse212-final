@@ -14,17 +14,30 @@ A web server uses a queue in order to keep track of requests as they come in.
 # Queues in Python
 
 In Python, a queue can be represented as a list. In order to enqueue a value to a list, or in layman's terms, add to the back of the list, use the .append() method. 
-
+```
 my_queue.append(value)
+```
 
 Removing a value from a list, or dequeueing it, has two approaches. The first is to remove and return the item from the front of the queue. The second is to pop off index zero.
 
+```
 value = my_queue[0]
 del my_queue[0]
 or
 value = my_queue.pop(0)
+```
 
+In order to return the size of a queue, use the length() function.
 
+```
+length = len(my_queue)
+```
+
+You can learn whether a queue is empty, using a boolean if statement, which will return true if the length of the queue is zero.
+
+```
+if len(my_queue) == 0:
+```
 
 # Example
 
