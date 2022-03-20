@@ -38,10 +38,67 @@ You can learn whether a queue is empty, using a boolean if statement, which will
 
 ``` python
 if len(my_queue) == 0:
-  print("Empty queue!)
+  print("Empty queue!")
 ```
 
-# Example
+# Example: Roller Coaster Queue
+
+Roller Coasters are known for having very long lines. We can use the queue data structure in order to simulate how the theme-park-goers interact with it.
+
+``` python
+# Roller Coaster Queue
+rcq = ["Jane", "Thomas", "Mark", "Dorothy", "Shannon", "Ken", "Paul", "Polly"]
+
+print("Welcome to the Roller Coaster! You must be THIS high to ride.")
+print(f"There are currently {len(rcq)} people in line.")
+print(rcq)
+print()
+
+print("Jane and Thomas get on the roller coaster.")
+rcq.pop(0)
+rcq.pop(0)
+print(rcq)
+print()
+
+print("Three more people get in line.")
+rcq.append("Caleb")
+rcq.append("Mary")
+rcq.append("Josh")
+print(f"Now there are {len(rcq)} people in line.")
+print(rcq)
+print()
+
+print("Four people get on the roller coaster.")
+rcq.pop(0)
+rcq.pop(0)
+rcq.pop(0)
+rcq.pop(0)
+print(f"Now there are {len(rcq)} people still in line.")
+print(rcq)
+print()
+
+print("Thomas enqueues again because the roller coaster was so much fun, but Jane doesn't because she vomited after getting off.")
+print("I don't think Thomas is getting a second date.")
+rcq.append("Thomas")
+print(rcq)
+print()
+
+print("Paul gets on the roller coaster, but Polly chickens out at the last minute.")
+rcq.pop(0)
+rcq.pop(0)
+print(f"Now there are {len(rcq)} people in line.")
+print(rcq)
+print()
+
+print("Suddenly, a thunder storm breaks out and the theme park must close unexpectedly.")
+print("The last four people in line must dequeue without getting a ride on the roller coaster.")
+rcq.pop(0)
+rcq.pop(0)
+rcq.pop(0)
+rcq.pop(0)
+print(f"Hopefully, Paul got off safely. Now there are {len(rcq)} people in line.")
+print(rcq)
+```
 
 # Problem to Solve
 
