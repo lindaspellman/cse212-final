@@ -11,6 +11,8 @@ A web server uses a queue in order to keep track of requests as they come in.
 
 ## Reader/Writer Queue
 
+A reader/writer queue is one in which multiple components of software need to look like they are running at the same time and each component often needs information from the others in order to function properly. This type of queue is useful in that only one user can write to a program at a time, and once that writer exits the queue, the next user can read or write onto the variable changed.
+
 # Queues in Python
 
 In Python, a queue can be represented as a list. In order to enqueue a value to a list, or in layman's terms, add to the back of the list, use the .append() method. 
