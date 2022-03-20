@@ -41,66 +41,51 @@ if len(my_queue) == 0:
   print("Empty queue!")
 ```
 
-# Example: Roller Coaster Queue
+# Example: Stoplight Queue
 
-Roller Coasters are known for having very long lines. We can use the queue data structure in order to simulate how the theme-park-goers interact with it.
+A good example of a queue can be found in the line of cars found at a stoplight at the end of a one-way street. We'll start with a queue that already has three vehicles.
 
 ``` python
-# Roller Coaster Queue
-rcq = ["Jane", "Thomas", "Mark", "Dorothy", "Shannon", "Ken", "Paul", "Polly"]
+slq = ["red car", "blue car", "black car"]
 
-print("Welcome to the Roller Coaster! You must be THIS high to ride.")
-print(f"There are currently {len(rcq)} people in line.")
-print(rcq)
-print()
+print("At a stoplight at the end of a one-way road, there are three cars.")
+print("Before the light changes to green, a grey truck and another blue car roll up to the end of the line.")
+slq.append("grey truck")
+slq.append("blue car")
 
-print("Jane and Thomas get on the roller coaster.")
-rcq.pop(0)
-rcq.pop(0)
-print(rcq)
-print()
+print("The light goes green and the three original cars are able to move through the intersection before the light goes red.")
+slq.pop(0)
+slq.pop(0)
+slq.pop(0)
 
-print("Three more people get in line.")
-rcq.append("Caleb")
-rcq.append("Mary")
-rcq.append("Josh")
-print(f"Now there are {len(rcq)} people in line.")
-print(rcq)
-print()
+print("A red truck, a yellow bug, and a green suv join the line.")
+slq.append("red truck")
+slq.append("yellow bug")
+slq.append("green suv")
 
-print("Four people get on the roller coaster.")
-rcq.pop(0)
-rcq.pop(0)
-rcq.pop(0)
-rcq.pop(0)
-print(f"Now there are {len(rcq)} people still in line.")
-print(rcq)
-print()
+print("The grey truck turns right.")
+slq.pop(0)
 
-print("Thomas enqueues again because the roller coaster was so much fun, but Jane doesn't because she vomited after getting off.")
-print("I don't think Thomas is getting a second date.")
-rcq.append("Thomas")
-print(rcq)
-print()
+print("The light is taking a long time, so four more vehicles join the line.")
+slq.append("green jeep")
+slq.append("limo")
+slq.append("semi")
+slq.append("pink suv")
 
-print("Paul gets on the roller coaster, but Polly chickens out at the last minute.")
-rcq.pop(0)
-rcq.pop(0)
-print(f"Now there are {len(rcq)} people in line.")
-print(rcq)
-print()
+print("The light finally goes red, and five vehicles zoom through.")
+slq.pop(0)
+slq.pop(0)
+slq.pop(0)
+slq.pop(0)
+slq.pop(0)
 
-print("Suddenly, a thunder storm breaks out and the theme park must close unexpectedly.")
-print("The last four people in line must dequeue without getting a ride on the roller coaster.")
-rcq.pop(0)
-rcq.pop(0)
-rcq.pop(0)
-rcq.pop(0)
-print(f"Hopefully, Paul got off safely. Now there are {len(rcq)} people in line.")
-print(rcq)
+print(slq)
+print("Printing the queue, we see that three vehicles are left: the limo, the semi, and the pink suv.")
 ```
 
-# Problem to Solve: Roller Coaster
+# Problem to Solve: Roller Coaster Queue
+
+Roller Coasters are known for having very long lines. Use this code to enqueue and dequeue a line and find out how many people are in the line at a given time.
 
 ``` python
 rcq = ["Jane", "Thomas", "Mark", "Dorothy", "Shannon", "Ken", "Paul", "Polly"]
