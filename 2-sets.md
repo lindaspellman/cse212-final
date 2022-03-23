@@ -16,7 +16,7 @@ Sets:
 Hashing is the name of the technique used to add, remove, and efficiently test for membership in a set. 
 - index(n) hashing function is not based on the order the value was added.
 
-# Dealing with Conflicts
+## Dealing with Index Conflicts
 
 2 common ways to deal with conflicts
 - open addressing
@@ -30,7 +30,25 @@ Sets can be represented using curly braces, but if you're familiar with dictiona
 empty_set = set()
 ```
 
+Adding to a set:
+``` python
+my_set.add(value)
+```
 
+Removing from a set:
+``` python
+my_set.remove(value)
+```
+
+Checking for membership in a set:
+``` python
+if value in my_set:
+```
+
+Finding the size of a set:
+``` python
+length = len(my_set)
+```
 
 # Example
 
