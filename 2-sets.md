@@ -1,7 +1,6 @@
 
 # Introduction to Sets
-## Characteristics
-Sets:
+## Characteristics of Sets
 - don't care about order
 - doesn't allow duplicate data, which means you can efficiently test the set on whether a certain piece of data is a member of the set
 - easy to convert a list to a set, no raising errors, just filters the duplicates
@@ -24,7 +23,7 @@ Hashing is the name of the technique used to add, remove, and efficiently test f
 
 # Sets in Python
 
-Sets can be represented using curly braces, but if you're familiar with dictionaries or maps, you'll know that Python also represents those using curly braces. So, in order to differentiate sets from dictionaries, an empty set is indicated with set() function.
+Sets can be represented using curly braces, but if you're familiar with dictionaries or maps, you'll know that Python also represents those using curly braces. So, in order to differentiate sets from dictionaries, an empty set is indicated with the set() function.
 
 ``` python
 empty_set = set()
@@ -48,6 +47,18 @@ if value in my_set:
 Finding the size of a set:
 ``` python
 length = len(my_set)
+```
+
+To find the intersection or union of two sets:
+``` python
+set1 = {1, 2, 3, 4, 5}
+set2 = {4, 5, 6, 7, 8}
+
+set3 = intersection(set1, set2)  # This will result in {4, 5}
+set3 = set1 & set2               # Alternate way of writing an intersection
+
+set4 = union(set1, set2)  # This will result in {1, 2, 3, 4, 5, 6, 7, 8}
+set4 = set1 | set2        # Alternate way of writing a union
 ```
 
 # Example
