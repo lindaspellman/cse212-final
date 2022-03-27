@@ -63,8 +63,9 @@ set4 = union(set1, set2)  # This will result in {1, 2, 3, 4, 5, 6, 7, 8}
 set4 = set1 | set2        # Alternate way of writing a union
 ```
 
-## Example
+## Example: An Intersection and Union of Two Sets
+Two classes are surveyed on their favorite colors. The two lists are combined into one unified set. Another set is taken of the colors that the two classes have in common, also known as the intersection. 
 
-
-## Problem to Solve
-
+## Problem to Solve: Color Blindness
+Color blind people see colors differently and cannot see some of the colors that most people can see. We can imagine the colors that color blind people can see as being in one set, and the colors that non-color blind people can see as being in another set.
+Find the intersection of these two sets. 
