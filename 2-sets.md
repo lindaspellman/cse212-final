@@ -6,21 +6,25 @@ Sets don't allow duplicate data, which means that it is easy to convert a list t
 Sets can be used in several ways. First, they can be used to find unique values in a list. Second, in the case of a previous calculation, sets provide quick access to the given unique results. Third, sets can be used to perform mathematical set operations such as an intersection and union. Intersections refer to common values between two sets. Unions refer to all values within two sets.
 
 ## Hashing
-Hashing is the name of the technique used to add, remove, and efficiently test for membership in a set. It is the process of translating a given key into a code. Adding values to a set via hashing ends in a set called a "sparse list." This means that, since sets don't care about order, the list can have gaps in its index. 
-In order to place a value into a set, use this generic function:
+Hashing is the name of the technique used to add, remove, and efficiently test for membership in a set, giving us O(1) timing.. It is the process of translating a given key into a code. Adding values to a set via hashing ends in a set called a "sparse list." This means that, since sets don't care about order, the list can have gaps in its index. 
+In order to place a value into a set, use this generic function, using a hashing function as a variable:
 ```
 index(n) = hash(n) % sparse_list_size.
 ```
-The hash(n) represents what is called a hashing function. The hashing function will convert non-integers into integers so that the modulo operation can be performed. Python has a built-in hash function. The values returned by the hash function will vary everytime you run a Python script, but they will be consistent while you are running a script to completion. Not everything can be hashed. For example, a list in Python cannot be hashed. It is common to say that the index(n) is the hashing function for a set and that the values in a set have been hashed.
+You can use Python's built-in hashing function. Hashing function converts non-integers into integers because the modulo operation can only be performed on integers. Not everything can be hashed, such as a list. The point of hashing with sets is to hash individual numbers and place them within sets, so it would not make sense to be able to hash a list. 
 
-## Dealing with Index Conflicts
-
-2 common ways to deal with conflicts
+### How to Deal with Index Conflicts
+There are two common ways to deal with conflicts
 - open addressing
 - chaining
 
-## Sets in Python
+Open addressing is used in the case that a value is sent to a certain index based on its hashing, but that index is already taken by a different value. Open addressing states that this value should be sent to the next available index. But if the new index is already filled as well as subsequent indexes, clusters of conflict will erupt until an empty index is found. 
 
+Chaining, on the other hand, does not create clusters of conflict. Instead, it creates a list to which you can add new values, so that they all can co-exist in the same index. 
+
+The problem with these options is that they dismantle our O(1) timing and create O(n) timing. The solution to this is to increase the size of the sparse list and re-index all the values.
+
+## Sets in Python
 Sets can be represented using curly braces, but if you're familiar with dictionaries or maps, you'll know that Python also represents those using curly braces. So, in order to differentiate sets from dictionaries, an empty set is indicated with the set() function.
 
 ``` python
@@ -60,6 +64,7 @@ set4 = set1 | set2        # Alternate way of writing a union
 ```
 
 ## Example
+
 
 ## Problem to Solve
 
