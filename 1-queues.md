@@ -122,4 +122,5 @@ print("The last four people in line must dequeue without getting a ride on the r
 print(f"Hopefully, Paul got off safely. Now there are {} people in line.") # How many people are now in line?
 print(rcq)
 ```
+[Solution](.py)
 [Return to Welcome Page](0-welcome.md)
