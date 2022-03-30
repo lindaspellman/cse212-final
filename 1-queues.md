@@ -123,4 +123,4 @@ print(f"Hopefully, Paul got off safely. Now there are {} people in line.") # How
 print(rcq)
 ```
 [Solution](.py)
-[Return to Welcome Page](0-welcome.md)
+- [Return to Welcome Page](0-welcome.md)
