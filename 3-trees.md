@@ -19,7 +19,7 @@ A balanced binary search tree is a BST whose subtree height are relatively equal
 
 
 ## BST in Python
-Python does not have a built-in BST class, so you must write you
+Python does not have a built-in BST class, so you must write 
 
 ## BST Operations
 ### Inserting into a BST
