@@ -1,4 +1,4 @@
-# Introduction
+# Introduction to Trees
 Trees are a data structure that are similar to linked lists. They have pointers like linked lists do, but they are different in that they can be connected to many different nodes. 
 There are four types of trees: 
 - binary
@@ -17,9 +17,6 @@ A balanced binary search tree is a BST whose subtree height are relatively equal
 
 ## Non-binary Trees
 
-
-## BST in Python
-Python does not have a built-in BST class, so you must write 
 
 ## BST Operations
 ### Inserting into a BST
