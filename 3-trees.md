@@ -16,14 +16,36 @@ A binary search tree is different from a binary tree because it follows rules th
 A balanced binary search tree is a BST whose subtree height are relatively equal. The number of nodes between the root and leaves determine the height of a tree.
 
 ## Non-binary Trees
-
+Non-binary trees are similar to the aforementioned binary trees, except for a vital difference. Non-binary trees are able to have any number of child nodes attached to their parent nodes. This can make for very long and complicated subtrees.
 
 ## BST Operations
 ### Inserting into a BST
-Insertion is a recursive operation, meaning that you must write a base case and a smaller problem, which are needed to end the base case properly.
+Insertion is a recursive operation where the subtrees are searched to find the next available place for the data to be inserted. Its performance equates to O(log n).
 
 In Python, 
 ### Traversing a BST
+Traversing a BST requires two different functions: traverse_forward and traverse_reverse. The former function travels the BST from smallest to largest values and performs at a speed of O(n). The latter travels the opposite way, from largest to smallest values, but also performs at O(n). 
+
+### Other Important BST Operations
+``` python
+remove(value)
+```
+
+``` python
+contains(value)
+```
+
+``` python
+height(node)
+```
+
+``` python
+size()
+```
+
+``` python
+empty()
+```
 ## Example
 ## Problem to Solve
 
