@@ -67,7 +67,7 @@ def _insert(self, data, node):
 ``` 
 ### Traversing a BST
 Traversing a BST requires two different functions: traverse_forward and traverse_reverse. The former function travels the BST from smallest to largest values and performs at a speed of O(n). The latter travels the opposite way, from largest to smallest values, but also performs at O(n). 
-
+- Traverse_forward
 ``` python
 def __iter__(self):
 	"""
@@ -111,6 +111,38 @@ def _traverse_forward(self, node):
 		yield from self._traverse_forward(node.left)
 		yield node.data
 		yield from self._traverse_forward(node.right)
+```
+- Traverse_reverse
+``` python
+def __reversed__(self):
+	"""
+	Perform a formward traversal (in order traversal) starting from 
+	the root of the BST.  This function is called when a the 
+	reversed function is called and is frequently used with a for
+	loop.
+
+	for value in reversed(my_bst):
+	    print(value)
+
+	"""        
+	yield from self._traverse_backward(self.root)  # Start at the root
+	
+def _traverse_backward(self, node):
+	"""
+	Does a backwards traversal (reverse in-order traversal) through the 
+	BST.  If the node that we are given (which is the current
+	sub-tree) exists, then we will keep traversing on the right
+	side (thus getting the larger numbers first), then we will 
+	provide the data in the current node, and finally we will 
+	traverse on the left side (thus getting the smaller numbers last).
+
+	This function is intended to be called the first time by 
+	the __reversed__ function.        
+	"""
+	if node is not None:
+	    yield from self._traverse_backward(node.right)
+	    yield node.data
+	    yield from self._traverse_backward(node.left)
 ```
 
 ### Other Important BST Operations
