@@ -146,6 +146,7 @@ def _traverse_backward(self, node):
 ```
 
 ### Other Important BST Operations
+#### Data Removal
 ``` python
 remove(value)
 ```
