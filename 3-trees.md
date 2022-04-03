@@ -149,23 +149,99 @@ def _traverse_backward(self, node):
 ``` python
 remove(value)
 ```
-
+#### Testing for Membership
+Here is an example of how to test for membership in a BST. 
 ``` python
-contains(value)
+def __contains__(self, data):
+        """ 
+        Checks if data is in the BST.  This function
+        supports the ability to use the 'in' keyword:
+
+        if 5 in my_bst:
+            ("5 is in the bst")
+
+        """
+        return self._contains(data, self.root)  # Start at the root
+
+def _contains(self, data, node):
+        """
+        This funciton will search for a node that contains
+        'data'.  The current sub-tree being search is 
+        represented by 'node'.  This function is intended
+        to be called the first time by the __contains__ function.
+        """
+        if data < node.data:
+            # The data belongs on the left side.
+            if node.left is None:
+                # We found the bottom of the tree
+                return False 
+            else:
+                # Need to keep looking.  Call _contains
+                # recursively on the left sub-tree.
+                return self._contains(data, node.left)
+        
+        elif data == node.data:
+            return True 
+        
+        else:
+            # The data belongs on the right side.
+            if node.right is None:
+                # We found the bottom of the tree
+                return False
+            else:
+                # Need to keep looking.  Call _contains
+                # recursively on the right sub-tree.
+                return self._contains(data, node.right)
 ```
 
+#### Finding the Height
+Here is an example of how to use recursion in order to find the height of a BST. 
 ``` python
-height(node)
-```
+def get_height(self):
+        """
+        Determine the height of the BST.  Note that an empty tree
+        will have a height of 0 and a tree with one item (root) will
+        have a height of 1.
+        
+        If the tree is empty, then return 0.  Otherwise, call 
+        _get_height on the root which will recursively determine the 
+        height of the tree.
+        """
+        if self.root is None:
+            return 0
+        else:
+            return self._get_height(self.root)  # Start at the root
 
-``` python
-size()
-```
+def _get_height(self, node):
+        """
+        Determine the height of the BST.  The height of a sub-tree 
+        (represented by 'node') is 1 plus the height of either the 
+        left sub-tree or the right sub-tree (whichever one is bigger).
 
+        This function intended to be called the first time by 
+        get_height.
+        """
+        if node is None:
+            return 0
+        else:
+            left_height = self._get_height(node.left)
+            right_height = self._get_height(node.right)
+            if left_height > right_height:
+                return left_height + 1
+            else:
+                return right_height + 1
+```
+#### Finding the Size
+The size() and empty() operations can be conducted using the same code.
 ``` python
-empty()
+def size(node):
+    if node is None:
+        return 0
+    else:
+        return (size(node.left)+ 1 + size(node.right))
 ```
 ## Example
+
 ## Problem to Solve
 
 
