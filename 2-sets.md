@@ -25,28 +25,28 @@ Chaining, on the other hand, does not create clusters of conflict. Instead, it c
 The problem with these options is that they dismantle our O(1) timing and create O(n) timing. The solution to this is to increase the size of the sparse list and re-index all the values.
 
 ## Sets in Python
-Sets can be represented using curly braces, but if you're familiar with dictionaries or maps, you'll know that Python also represents those using curly braces. So, in order to differentiate sets from dictionaries, an empty set is indicated with the set() function.
+Sets can be represented using curly braces, but if you're familiar with dictionaries or maps, you'll know that Python also represents those using curly braces. So, in order to differentiate sets from dictionaries, an empty set is indicated with the set() function. Set operations are very fast and efficient. 
 
 ``` python
 empty_set = set()
 ```
 
-Adding to a set:
+Adding to a set is O(1).
 ``` python
 my_set.add(value)
 ```
 
-Removing from a set:
+Removing from a set is O(1).
 ``` python
 my_set.remove(value)
 ```
 
-Checking for membership in a set:
+Checking for membership in a set is O(1).
 ``` python
 if value in my_set:
 ```
 
-Finding the size of a set:
+Finding the size of a set is O(1).
 ``` python
 length = len(my_set)
 ```
@@ -64,11 +64,27 @@ set4 = set1 | set2        # Alternate way of writing a union
 ```
 
 ## Example: An Intersection and Union of Two Sets
-Two classes are surveyed on their favorite colors. The two lists are combined into one unified set. Another set is taken of the colors that the two classes have in common, also known as the intersection. 
+Two classes are surveyed on their favorite colors. The two lists are combined into one unified set. Another set is taken of the colors that the two classes have in common, also known as the intersection.
 
-## Problem to Solve: Color Blindness
-Color blind people see colors differently and cannot see some of the colors that most people can see. We can imagine the colors that color blind people can see as being in one set, and the colors that non-color blind people can see as being in another set.
-Find the intersection of these two sets. 
+``` python
+class1 = {"blue", "red", "black", "green"}
+class2 = {"blue", "black", "yellow", "purple", "orange"}
 
-[Solution](.py)
+colors_in_common = intersection(class1, class2)
+print(colors_in_common)
+
+# This outputs: {'blue', 'black'}
+```
+
+## Problem to Solve: Favorite Cuisine
+Three different were surveyed about the students' favorite cuisines.
+They can be summarized as follows:
+
+class1 = {"Italian", "Chinese", "American", "Mexican"}
+class2 = {"American", "Japanese", "Korean", "Indian", "Thai"}
+class3 = {"Mexican", "Brazilian", "American", "Chinese"}
+
+Use the union set operator in order to create a fourth set combining each unique type of cuisine.
+
+[Solution](set_prob_soln.py)
 - [Return to Welcome Page](0-welcome.md)
