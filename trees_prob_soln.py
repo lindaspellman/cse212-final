@@ -1,3 +1,5 @@
+### Trees Problem Solution - Remove Node from BST
+
 # Helper function to find minimum value node in the subtree rooted at `curr`
 def getMinimumKey(curr):
     while curr.left:
