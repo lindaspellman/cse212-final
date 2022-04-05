@@ -238,6 +238,7 @@ def size(node):
         return (size(node.left)+ 1 + size(node.right))
 ```
 ## Example
+An real-world example of one of these types of trees is a family tree. Think of yourself as the root of the tree and your ancestors as the increasing number of nodes stretching all the way back in time to its leaf nodes. Family trees tend to be more complicated than your average tree though because child nodes can be connected to each other in a myriad of ways in order to convey family relationships. If you imagine that thewhole human race is descended from Adam and Eve, you can imagine how a family tree would grow large and then start decreasing in side as the height of the tree grows.
 
 ## Problem to Solve
 Use this base code in order to write code for how to remove a node from A BST.
