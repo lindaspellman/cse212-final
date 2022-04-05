@@ -133,5 +133,5 @@ print(f"Hopefully, Paul got off safely. Now there are {[function]} people in lin
 # CODE HERE
 print(rcq)
 ```
-[Solution](roller_coaster_prob_soln.py)
+[Solution](queue_prob_soln.py)
 - [Return to Welcome Page](0-welcome.md)
