@@ -5,13 +5,13 @@ If you are from the United States of America, you may not be familiar with the w
 
 # Queues in Python
 
-In Python, a queue can be represented as a list. In order to enqueue a value to a list, or in layman's terms, add to the back of the list, use the .append() method. 
+In Python, a queue can be represented as a list. In order to enqueue a value to a list, or in layman's terms, add to the back of the list, use the .append() method. It performs at a speed of O(1).
 
 ``` python
 my_queue.append(value)
 ```
 
-Removing a value from a list, or dequeueing it, has two approaches. The first is to remove and return the item from the front of the queue. The second is to pop off index zero.
+Removing a value from a list, or dequeueing it, has two approaches. The first is to remove and return the item from the front of the queue. The second is to pop off index zero. It performs at a speed of O(n).
 
 ``` python
 value = my_queue[0]
@@ -20,13 +20,13 @@ or
 value = my_queue.pop(0)
 ```
 
-In order to return the size of a queue, use the length() function.
+In order to return the size of a queue, use the length() function. It performs at a speed of O(1).
 
 ``` python
 length = len(my_queue)
 ```
 
-You can learn whether a queue is empty, using a boolean if statement, which will return true if the length of the queue is zero.
+You can learn whether a queue is empty, using a boolean if statement, which will return true if the length of the queue is zero. It performs at a speed of O(1).
 
 ``` python
 if len(my_queue) == 0:
@@ -83,44 +83,55 @@ Roller Coasters are known for having very long lines. Use this code to enqueue a
 rcq = ["Jane", "Thomas", "Mark", "Dorothy", "Shannon", "Ken", "Paul", "Polly"]
 
 print("Welcome to the Roller Coaster! You must be THIS high to ride.")
-print(f"There are currently {?} people in line.") # How many people are in line?
+print(f"There are currently {[function]} people in line.") # How many people are in line?
+# CODE HERE
 print(rcq)
 print()
 
 print("Jane and Thomas get on the roller coaster.")
 # How should they be dequeued?
+# CODE HERE
 print(rcq)
 print()
 
 print("Three more people get in line.") 
 # How should they be enqueued?
-print(f"Now there are {?} people in line.") # How many people are now in line?
+# CODE HERE
+print(f"Now there are {[function]} people in line.") # How many people are now in line?
+# CODE HERE
 print(rcq)
 print()
 
 print("Four people get on the roller coaster.")
 # How should they be dequeued?
-print(f"Now there are {?} people still in line.") # How many people are now in line?
+# CODE HERE
+print(f"Now there are {[function]} people still in line.") # How many people are now in line?
+# CODE HERE
 print(rcq)
 print()
 
 print("Thomas enqueues again because the roller coaster was so much fun, but Jane doesn't want to because she vomited after getting off.")
 print("I don't think Thomas is getting a second date.")
 # How should he be enqueued?
+# CODE HERE
 print(rcq)
 print()
 
 print("Paul gets on the roller coaster, but Polly chickens out at the last minute.")
 # How should they be dequeued?
-print(f"Now there are {?} people in line.") # How many people are now in line?
+# CODE HERE
+print(f"Now there are {[function]} people in line.") # How many people are now in line?
+# CODE HERE
 print(rcq)
 print()
 
 print("Suddenly, a thunder storm breaks out and the theme park must close unexpectedly.")
 print("The last four people in line must dequeue without getting a ride on the roller coaster.")
 # How should they be dequeued?
-print(f"Hopefully, Paul got off safely. Now there are {} people in line.") # How many people are now in line?
+# CODE HERE
+print(f"Hopefully, Paul got off safely. Now there are {[function]} people in line.") # How many people are now in line?
+# CODE HERE
 print(rcq)
 ```
-[Solution](.py)
+[Solution](roller_coaster_prob_soln.py)
 - [Return to Welcome Page](0-welcome.md)
