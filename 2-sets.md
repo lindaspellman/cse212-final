@@ -79,11 +79,11 @@ print(colors_in_common)
 ## Problem to Solve: Favorite Cuisine
 Three different were surveyed about the students' favorite cuisines.
 They can be summarized as follows:
-
+``` python
 class1 = {"Italian", "Chinese", "American", "Mexican"}
 class2 = {"American", "Japanese", "Korean", "Indian", "Thai"}
 class3 = {"Mexican", "Brazilian", "American", "Chinese"}
-
+```
 Use the union set operator in order to create a fourth set combining each unique type of cuisine.
 
 [Solution](set_prob_soln.py)
