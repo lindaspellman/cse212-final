@@ -147,7 +147,7 @@ def _traverse_backward(self, node):
 
 ### Other Important BST Operations
 #### Testing for Membership
-Here is an example of how to test for membership in a BST. 
+Here is an code example of how to test for membership in a BST. It performs that a speed of O(log n).
 ``` python
 def __contains__(self, data):
         """ 
@@ -192,7 +192,7 @@ def _contains(self, data, node):
 ```
 
 #### Finding the Height
-Here is an example of how to use recursion in order to find the height of a BST. 
+Here is an example of how to use recursion in order to find the height of a BST. It performs at a speed of O(n).
 ``` python
 def get_height(self):
         """
@@ -229,7 +229,7 @@ def _get_height(self, node):
                 return right_height + 1
 ```
 #### Finding the Size
-The size() and empty() operations can be conducted using the same code.
+The size() and empty() operations can be conducted using the same code. They both perform at a speed of O(1).
 ``` python
 def size(node):
     if node is None:
@@ -241,7 +241,7 @@ def size(node):
 An real-world example of one of these types of trees is a family tree. Think of yourself as the root of the tree and your ancestors as the increasing number of nodes stretching all the way back in time to its leaf nodes. Family trees tend to be more complicated than your average tree though because child nodes can be connected to each other in a myriad of ways in order to convey family relationships. If you imagine that thewhole human race is descended from Adam and Eve, you can imagine how a family tree would grow large and then start decreasing in side as the height of the tree grows.
 
 ## Problem to Solve
-Use this base code in order to write code for how to remove a node from A BST.
+Use this base code in order to write code for how to remove a node from A BST. Removal performs at a speed of O(log n).
 ``` python
 # Helper function to find minimum value node in the subtree rooted at `curr`
 def getMinimumKey(curr):
